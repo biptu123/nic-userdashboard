@@ -48,16 +48,16 @@
                                         <td class="pl-auto py-4 whitespace-nowrap text-sm text-gray-500">
                                             {{-- View --}}
                                             <a href="{{ route('view', $file->id) }}"
-                                                class="text-green-600 hover:text-green-900 mr-2 font-bold">View</a>
+                                                class="text-green-600 hover:text-green-900 mr-2 font-medium">View</a>
                                             {{-- Download --}}
                                             <a href="{{ asset('storage/' . $file->filepath) }}" target="_blank"
-                                                class="text-blue-500 hover:text-blue-900 mr-2 font-bold">Download</a>
+                                                class="text-blue-500 hover:text-blue-900 mr-2 font-medium">Download</a>
                                             {{-- Delete --}}
                                             <form action="{{ route('delete', $file->id) }}" method="POST" class="inline">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit"
-                                                    class="text-red-600 hover:text-red-900 font-bold">Delete</button>
+                                                    class="text-red-600 hover:text-red-900 font-medium">Delete</button>
                                             </form>
                                         </td>
                                     </tr>

@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\File;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class FileController extends Controller
@@ -18,7 +17,7 @@ class FileController extends Controller
 
     public function show()
     {
-        $files = Auth::user()->files;
+        $files = File::where('user_id', session('LoggedUser'))->get();
         return view('files', compact('files'));
     }
 
@@ -35,7 +34,7 @@ class FileController extends Controller
             $path = $file->storeAs('uploads', $filename, 'public');
 
             File::create([
-                'user_id' => Auth::id(),
+                'user_id' => session('LoggedUser'),
                 'filename' => $request->name,
                 'filepath' => $path,
             ]);
@@ -44,8 +43,6 @@ class FileController extends Controller
         }
         return view('upload');
     }
-
-
 
     public function delete($id)
     {

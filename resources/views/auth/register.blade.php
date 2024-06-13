@@ -18,7 +18,7 @@
                         <label for="name" class="sr-only">Name</label>
                         <input id="name" name="name" type="text" required
                             class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                            placeholder="Name">
+                            placeholder="Name" value="{{ old('name') }}">
 
                         {{-- For error message --}}
                         <x-error-message field="name" class="mb-3" />
@@ -30,7 +30,7 @@
                         <label for="email" class="sr-only">Email address</label>
                         <input id="email" name="email" type="email" autocomplete="email" required
                             class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                            placeholder="Email address">
+                            placeholder="Email address" value="{{ old('email') }}">
 
                         {{-- For error message --}}
                         <x-error-message field="email" class="mb-3" />
@@ -41,7 +41,7 @@
                         <label for="phone" class="sr-only">Phone Number</label>
                         <input id="phone" name="phone" type="tel" required
                             class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                            placeholder="Phone Number">
+                            placeholder="Phone Number" value="{{ old('phone') }}">
 
                         {{-- For error message --}}
                         <x-error-message field="phone" class="mb-3" />

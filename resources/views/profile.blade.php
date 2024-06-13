@@ -24,7 +24,7 @@
                         <label for="name" class="sr-only">Name address</label>
                         <input id="name" name="name" type="text" autocomplete="name" required
                             class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                            placeholder="Name" value="{{ auth()->user()->name }}">
+                            placeholder="Name" value="{{ $user->name }}">
                         {{-- Error Message --}}
                         <x-error-message field="name" class="mb-3" />
                     </div>
@@ -32,7 +32,7 @@
                         <label for="email" class="sr-only">Email address</label>
                         <input id="email" name="email" type="email" autocomplete="email" required
                             class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                            placeholder="Email address" value="{{ auth()->user()->email }}" readonly>
+                            placeholder="Email address" value="{{ $user->email }}" readonly>
                         {{-- Error Message --}}
                         <x-error-message field="email" class="mb-3" />
                     </div>
@@ -40,7 +40,7 @@
                         <label for="phone" class="sr-only">Phone Number</label>
                         <input id="phone" name="phone" type="text" autocomplete="phone" required
                             class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                            placeholder="Phone number" value="{{ auth()->user()->phone }}">
+                            placeholder="Phone number" value="{{ $user->phone }}">
                         {{-- Error Message --}}
                         <x-error-message field="phone" class="mb-3" />
                     </div>

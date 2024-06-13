@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FileController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -9,23 +10,26 @@ Route::get('/', function () {
 });
 
 Route::group([
-    "middleware" => ["guest"]
+    "middleware" => ["LoggedOut"]
 ], function () {
     // register route (GET + POST)
-    Route::match(['get', 'post'], '/register', [AuthController::class, 'register'])->name('register');
+    Route::get('/login', [UserController::class, 'login']);
+    Route::get('/register', [UserController::class, 'register']);
 
     // login route (GET + POST)
-    Route::match(['get', 'post'], '/login', [AuthController::class, 'login'])->name('login');
+    Route::post('/login', [AuthController::class, 'login'])->name('login');
+    Route::post('/register', [AuthController::class, 'register'])->name('register');
 });
 
 Route::group([
-    "middleware" => ["auth"]
+    "middleware" => ["LoggedIn"]
 ], function () {
+
     // profile route (GET + POST)
-    Route::match(['get', 'post'], '/profile', [AuthController::class, 'profile'])->name('profile');
+    Route::match(['get', 'post'], '/profile', [UserController::class, 'profile'])->name('profile');
 
     // dashboard route
-    Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
+    Route::get('/dashboard', [UserController::class, 'dashboard'])->name('dashboard');
 
     // logout route
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');

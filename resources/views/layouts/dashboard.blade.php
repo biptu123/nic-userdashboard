@@ -120,16 +120,16 @@
                 <div
                     class="w-1/3 aspect-square bg-gray-300 hidden md:flex items-center justify-center rounded-full cursor-pointer text-gray-800 text-xl font-bold">
 
-                    {{ collect(explode(' ', auth()->user()->name))->pipe(function ($parts) {
+                    {{ collect(explode(' ', $user->name))->pipe(function ($parts) {
                         return substr($parts->first(), 0, 1) . substr($parts->last(), 0, 1);
                     }) }}
 
 
                 </div>
 
-                <h1 class="text-2xl font-light md:hidden">{{ auth()->user()->name }}</h1>
+                <h1 class="text-2xl font-light md:hidden">{{ $user->name }}</h1>
                 <h1 class="hidden text-md font-light md:block w-2/3 overflow-x-hidden break-words">
-                    {{ auth()->user()->name }}</h1>
+                    {{ $user->name }}</h1>
             </div>
 
             <ul class="mt-4" id="dropdown">
