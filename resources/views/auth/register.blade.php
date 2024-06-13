@@ -3,8 +3,8 @@
 @section('title', 'Register')
 
 @section('content')
-    <div class="h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-2xl w-full space-y-8 shadow-2xl p-16 bg-gray-200 rounded-lg">
+    <div class="h-screen flex items-center justify-center bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl w-full space-y-8 shadow-2xl p-16 bg-blue-100 rounded-lg">
             <div>
                 <h2 class=" text-center text-3xl font-extrabold text-gray-900">
                     Register

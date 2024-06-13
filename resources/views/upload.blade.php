@@ -6,8 +6,8 @@
     <div class="container mx-auto py-12 px-4 sm:px-6 lg:px-8 ">
         <div class="max-w-7xl mx-auto bg-blue-100 rounded-lg overflow-hidden  shadow-2xl p-5">
             <div class="p-4 ">
-                <h2 class="text-center text-3xl font-extrabold text-gray-900 mb-4">
-                    Upload Excel File
+                <h2 class="text-center text-3xl font-bold text-gray-900 mb-4">
+                    Upload&nbsp; Excel File
                 </h2>
 
 

@@ -8,16 +8,16 @@
             <div class="md:flex">
                 <div class="w-full p-4">
                     <div class="bg-gray-200 py-5 px-4 rounded-lg">
-                        <h2 class="text-center text-3xl font-extrabold text-gray-900 mb-4">
-                            File Details
+                        <h2 class="text-center text-3xl font-bold text-gray-900 mb-4">
+                            File&nbsp; Details
                         </h2>
 
                         {{-- Display File Details --}}
                         <h2 id="file-name" class="text-lg text-gray-900">
-                            File Name: {{ $file->filename }}
+                            File Name:&nbsp;&nbsp;&nbsp; {{ $file->filename }}
                         </h2>
                         <h2 id="file-path" class="text-lg text-gray-900">
-                            File Path:
+                            File Path:&nbsp;&nbsp;&nbsp;
                             @php
                                 $filePathParts = explode('/', $file->filepath);
                                 echo array_pop($filePathParts);

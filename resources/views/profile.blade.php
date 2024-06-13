@@ -3,11 +3,11 @@
 @section('title', 'Dashboard - Profile')
 
 @section('content')
-    <div class="h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-2xl w-full space-y-8 shadow-2xl p-16 bg-gray-200 rounded-lg">
+    <div class="h-screen flex items-center justify-center  py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl w-full space-y-8 shadow-2xl p-16 bg-blue-100 rounded-lg">
             <div>
-                <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
-                    My Profile
+                <h2 class="mt-6 text-center text-3xl font-bold text-gray-900">
+                    My&nbsp; Profile
                 </h2>
 
                 {{-- Failed Update --}}
@@ -47,7 +47,9 @@
 
                     <div>
                         {{-- Helper Text --}}
-                        <p class="text-xs text-yellow-600 my-2 mx-2">Leave blank if you don't want to change your password
+                        <p class="text-sm font-medium text-indigo-600 my-2 mx-2">Leave blank if you don't want to change
+                            your
+                            password
                         </p>
                         <label for="password" class="sr-only">Password</label>
                         <input id="password" name="password" type="text" autocomplete="password"

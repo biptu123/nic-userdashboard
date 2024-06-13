@@ -7,8 +7,8 @@
         <div class="w-full mx-auto  rounded-lg overflow-hidden ">
             <div class="md:flex w-full">
                 <div class="w-full p-4 ">
-                    <h2 class="text-center text-3xl font-extrabold text-gray-900 mb-4">
-                        My Uploaded Files
+                    <h2 class="text-center text-3xl font-bold text-gray-900 mb-4">
+                        My&nbsp; Uploaded&nbsp; Files
                     </h2>
 
                     {{-- Error Update --}}
@@ -20,8 +20,8 @@
 
                     {{-- Files Table --}}
                     <div class="overflow-x-auto w-full  shadow-xl rounded-sm">
-                        <table class="min-w-full divide-y divide-gray-200 bg-red-900">
-                            <thead class="bg-gray-200">
+                        <table class="min-w-full divide-y divide-gray-200 ">
+                            <thead class="bg-blue-100">
                                 <tr>
                                     <th scope="col"
                                         class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -48,16 +48,16 @@
                                         <td class="pl-auto py-4 whitespace-nowrap text-sm text-gray-500">
                                             {{-- View --}}
                                             <a href="{{ route('view', $file->id) }}"
-                                                class="text-green-600 hover:text-green-900 mr-2 font-extrabold">View</a>
+                                                class="text-green-600 hover:text-green-900 mr-2 font-bold">View</a>
                                             {{-- Download --}}
                                             <a href="{{ asset('storage/' . $file->filepath) }}" target="_blank"
-                                                class="text-blue-500 hover:text-blue-900 mr-2 font-extrabold">Download</a>
+                                                class="text-blue-500 hover:text-blue-900 mr-2 font-bold">Download</a>
                                             {{-- Delete --}}
                                             <form action="{{ route('delete', $file->id) }}" method="POST" class="inline">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit"
-                                                    class="text-red-600 hover:text-red-900 font-extrabold">Delete</button>
+                                                    class="text-red-600 hover:text-red-900 font-bold">Delete</button>
                                             </form>
                                         </td>
                                     </tr>

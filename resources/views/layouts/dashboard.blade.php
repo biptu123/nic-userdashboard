@@ -36,7 +36,6 @@
 
         main {
             flex-grow: 1;
-            padding: 20px;
             box-sizing: border-box;
             overflow-x: auto;
         }
@@ -221,7 +220,7 @@
     </aside>
 
     <!-- Content area -->
-    <main>
+    <main class="bg-gray-100">
         @yield('content')
     </main>
 
