@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\File;
 use Illuminate\Support\Facades\Storage;
 
+
 class FileController extends Controller
 {
     public function view($id)
@@ -46,10 +47,19 @@ class FileController extends Controller
 
     public function delete($id)
     {
-        $file = File::findOrFail($id);
-        Storage::delete($file->filepath);
-        $file->delete();
-
-        return redirect()->back()->with('success', 'File deleted successfully.');
+        try {
+            $file = File::findOrFail($id);
+            $filePath = $file->filepath;
+            // Check if file exists before attempting deletion
+            if (Storage::disk('public')->exists($filePath)) {
+                Storage::disk('public')->delete($filePath);
+                $file->delete();
+                return redirect()->back()->with('success', 'File deleted successfully.');
+            } else {
+                return redirect()->back()->with('error', 'File not found.' . $filePath);
+            }
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error deleting file: ' . $e->getMessage());
+        }
     }
 }

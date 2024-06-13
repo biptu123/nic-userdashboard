@@ -4,10 +4,10 @@
 
 @section('content')
     <div class="container mx-auto ">
-        <div class=" mx-auto bg-white rounded-lg overflow-hidden">
+        <div class=" mx-auto rounded-lg overflow-hidden">
             <div class="md:flex">
                 <div class="w-full p-4">
-                    <div class="bg-gray-200 py-5 px-4 rounded-lg">
+                    <div class="bg-blue-100 py-5 px-4 rounded-lg shadow-2xl">
                         <h2 class="text-center text-3xl font-bold text-gray-900 mb-4">
                             File&nbsp; Details
                         </h2>
@@ -24,7 +24,7 @@
                             @endphp
                         </h2>
                     </div>
-                    <div id="file-details" class="mt-4 p-4 border border-gray-300 rounded-md bg-gray-50 w-full ">
+                    <div id="file-details" class="mt-4 p-4 border border-gray-300 rounded-md bg-gray-50 w-full shadow-2xl">
                         <div class="overflow-x-auto overflow-y-auto">
                             <table id="file-content" class="min-w-full divide-y divide-gray-200 mt-4 hidden">
                                 <thead id="file-header"></thead>
