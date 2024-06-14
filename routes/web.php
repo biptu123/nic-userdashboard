@@ -15,9 +15,14 @@ Route::group([
     // register route (GET + POST)
     Route::get('/login', [UserController::class, 'login']);
     Route::get('/register', [UserController::class, 'register']);
+    Route::get('/forgot', [UserController::class, 'forgot']);
+    Route::get('/reset/{email}/{token}', [UserController::class, 'reset']);
+
 
     // login route (GET + POST)
     Route::post('/login', [AuthController::class, 'login'])->name('login');
+    Route::post('/forgot', [AuthController::class, 'forgot'])->name('forgot');
+    Route::post('/reset', [AuthController::class, 'reset'])->name('reset');
     Route::post('/register', [AuthController::class, 'register'])->name('register');
 });
 

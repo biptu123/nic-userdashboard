@@ -112,4 +112,20 @@ class UserController extends Controller
 
         return view('dashboard', compact('documentsPerDayData', 'totalFilesUploaded', 'firstUploadDate', 'memberFrom', 'lastUpdated', 'totalUploadedToday'));
     }
+
+    public function forgot()
+    {
+        return view("auth.forgot");
+    }
+
+    public function reset($email, $token)
+    {
+        // Validate the token and email here...
+        $user = User::where('email', $email)->where('token', $token)->first();
+        if (!$user || $user->token_expire < Carbon::now()) {
+            return redirect()->route('login')->with('error', 'Invalid or expired token.');
+        }
+
+        return view('auth.reset', compact('email', 'token'));
+    }
 }
