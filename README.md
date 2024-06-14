@@ -54,6 +54,17 @@ This project is a user dashboard application that lets authenticated users easil
     DB_USERNAME=your_database_username
     DB_PASSWORD=your_database_password
     ```
+-   Configure your smtp details the `.env` file:
+    ```env
+    MAIL_MAILER=smtp
+    MAIL_HOST=mailpit
+    MAIL_PORT=1025
+    MAIL_USERNAME=null
+    MAIL_PASSWORD=null
+    MAIL_ENCRYPTION=null
+    MAIL_FROM_ADDRESS="hello@example.com"
+    MAIL_FROM_NAME="${APP_NAME}"
+    ```
 -   Run the migrations:
 
     ```sh
