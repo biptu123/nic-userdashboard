@@ -11,6 +11,7 @@ This project is a user dashboard application that lets authenticated users easil
 -   **Sidebar Navigation**: Sidebar menu with links to home, file upload, and settings. Includes a hamburger menu for smaller screens.
 -   **Responsive Design**: Works well on computers, tablets, and phones.
 -   **Upload Statistics**: Visual representation of upload statistics using Chart.js.
+-   **Password Recovery**: User can recover there password through mail.
 
 ## Getting Started
 
