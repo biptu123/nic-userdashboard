@@ -220,7 +220,7 @@
     </aside>
 
     <!-- Content area -->
-    <main class="bg-gray-100">
+    <main class="bg-gray-100 py-2 overflow-y-auto">
         @yield('content')
     </main>
 
