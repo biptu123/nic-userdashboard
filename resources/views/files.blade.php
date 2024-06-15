@@ -3,7 +3,8 @@
 @section('title', 'Dashboard - Files')
 
 @section('content')
-    <div class="container mx-auto py-12 px-1 sm:px-6 lg:px-8 min-h-screen w-full h-fit overflow-x-auto ">
+    <div class="container mx-auto  px-1 sm:px-6 lg:px-8 min-h-screen w-full h-fit overflow-x-auto pt-12"
+        style="padding-bottom: 150px;">
         <h2 class="text-center text-3xl font-bold text-gray-900 mb-4">
             My&nbsp; Uploaded&nbsp; Files
         </h2>
